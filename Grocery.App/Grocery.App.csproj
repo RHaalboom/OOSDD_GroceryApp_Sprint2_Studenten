@@ -57,6 +57,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\LoginView.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Views\LoginView.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
@@ -67,12 +75,6 @@
 	  <ProjectReference Include="..\Grocery.Core.Data\Grocery.Core.Data.csproj" />
 	  <ProjectReference Include="..\Grocery.Core\Grocery.Core.csproj" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="MauiProgram.cs">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Compile>
-	</ItemGroup>
 	
 	<ItemGroup>
 	  <MauiXaml Update="Views\ChangeColorView.xaml">
@@ -82,9 +84,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\GroceryListsView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProductView.xaml">
